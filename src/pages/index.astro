@@ -1,0 +1,21 @@
+---
+import Layout from "../layout/Layout.astro";
+---
+
+<script>
+  const getHour = () => {
+    const date = new Date();
+    return date.getSeconds();
+  };
+  const hour = getHour();
+
+  const title = document.querySelector("h1");
+  title && (title.textContent = `Segundos actuales: ${hour}`);
+</script>
+
+<Layout title="Home" description="Bienvenidos a mi blog con astro">
+  <main class="flex flex-col w-full justify-center items-center h-screen">
+    <h1 class="text-violet-700 text-4xl font-bold"></h1>
+    <h2>Estoy dentro de footer</h2>
+  </main>
+</Layout>
